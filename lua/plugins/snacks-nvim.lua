@@ -2,12 +2,13 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
+  ---j type snacks.Config
   opts = {
     bigfile = { enabled = true },
     -- dashboard = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
+    gh = { enabled = true },
     -- notifier = { enabled = true },
 	lazygit = { enabled = true},
 	picker = { enabled = true},
@@ -16,6 +17,7 @@ return {
     -- scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    zen = { enabled = true },
   },
   keys = {
 	{ "<Leader>lg", function() Snacks.lazygit.open() end, desc = "Open lazygit" },
@@ -40,6 +42,11 @@ return {
     { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
     { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
     { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
+	-- gh
+	{ "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
+    { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },
+    { "<leader>gp", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
+    { "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "GitHub Pull Requests (all)" },
     -- Grep
     { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
     { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
@@ -75,5 +82,7 @@ return {
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+	-- others
+	{ "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
   }
 }

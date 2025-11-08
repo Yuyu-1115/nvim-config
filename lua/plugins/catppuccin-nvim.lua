@@ -9,9 +9,7 @@ return {
 		mason = true,
 		noice = true,
 		neotree = true,
-		telescope = {
-			enabled = true
-		},
+		snacks = true,
 		treesitter = true,
 		which_key = true
 		}
