@@ -2,10 +2,9 @@ return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvimtools/none-ls-extras.nvim"
+		"nvimtools/none-ls-extras.nvim",
 	},
-	opts = {
-	},
+	opts = {},
 	config = function()
 		local null_ls = require("null-ls")
 		null_ls.setup({
@@ -14,5 +13,5 @@ return {
 				require("none-ls.diagnostics.eslint"),
 			},
 		})
-	end
+	end,
 }

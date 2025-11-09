@@ -1,5 +1,3 @@
-
-
 return {
 	"neovim/nvim-lspconfig",
 	opts = {},
@@ -8,6 +6,5 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		"saghen/blink.cmp",
 	},
-	config = function()
-		end,
+	config = function() end,
 }

@@ -7,4 +7,11 @@ return {
   opts = {
     picker_integration = true,
   },
+  config = function ()
+  	require("uv").setup({
+		keymaps = {
+			prefix = "<leader>u",
+		}
+	})
+  end
 }

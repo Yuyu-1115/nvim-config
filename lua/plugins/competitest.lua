@@ -1,10 +1,10 @@
 return {
-	'xeluxee/competitest.nvim',
-	dependencies = 'MunifTanjim/nui.nvim',
+	"xeluxee/competitest.nvim",
+	dependencies = "MunifTanjim/nui.nvim",
 	opts = {
 		compile_command = {
 			c = { exec = "clang", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-			cpp = { exec = "clang++", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" , "-std=c++11"} },
+			cpp = { exec = "clang++", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)", "-std=c++11" } },
 			rust = { exec = "rustc", args = { "$(FNAME)" } },
 			java = { exec = "javac", args = { "$(FNAME)" } },
 		},
@@ -22,6 +22,5 @@ return {
 		testcases_output_file_format = "$(TCNUM).out",
 		received_contests_prompt_directory = false,
 		received_contests_prompt_extension = true,
-	}
-
+	},
 }

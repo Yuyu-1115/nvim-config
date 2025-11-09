@@ -3,5 +3,5 @@ return {
 	opts = {
 		enable_close = true,
 		enable_rename = true,
-	}
+	},
 }
