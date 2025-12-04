@@ -3,8 +3,8 @@ return {
 	dependencies = "MunifTanjim/nui.nvim",
 	opts = {
 		compile_command = {
-			c = { exec = "clang", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-			cpp = { exec = "clang++", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)", "-std=c++11" } },
+			c = { exec = "clang", args = { "-Wall", "$(FNAME)", "-g", "-o", "$(FNOEXT)" } },
+			cpp = { exec = "clang++", args = { "-Wall", "$(FNAME)", "-g", "-o", "$(FNOEXT)", "-std=c++11" } },
 			rust = { exec = "rustc", args = { "$(FNAME)" } },
 			java = { exec = "javac", args = { "$(FNAME)" } },
 		},
