@@ -26,8 +26,8 @@ return {
 				"ruff",
 				"lua_ls",
 				"tinymist",
-				"jdtls",,
-		}	}
+				"jdtls",
 			}
-	}
+		}
+	},
 }

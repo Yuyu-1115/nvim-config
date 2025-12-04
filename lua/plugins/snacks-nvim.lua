@@ -336,10 +336,8 @@ return {
 		},
 		{
 			"<leader>sq",
-			function()
-				Snacks.picker.qflist()
-			end,
-			desc = "Quickfix List",
+			":TodoTelescope<CR>",
+			desc = "Todo List",
 		},
 		{
 			"<leader>sR",
