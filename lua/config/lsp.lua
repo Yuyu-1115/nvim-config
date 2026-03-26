@@ -16,9 +16,6 @@ vim.lsp.config("*", {
 	capabilities = capabilities,
 })
 
-vim.lsp.config("roslyn", {})
-vim.lsp.enable("roslyn")
-
 -- LSP for vue, config copied from github
 local vue_language_server_path = vim.fn.expand("$MASON/packages")
 	.. "/vue-language-server"
