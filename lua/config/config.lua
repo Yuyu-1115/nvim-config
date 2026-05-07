@@ -7,6 +7,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 -- sync the clipboard by set the default clipboard to register unsingedplus
 vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = "osc52"
 
 -- set the line number to be relative
 vim.opt.relativenumber = true
