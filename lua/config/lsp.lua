@@ -100,6 +100,37 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+-- yaml-language-server
+vim.lsp.config("yamlls", {
+	settings = {
+		yaml = {
+			validate = true,
+			completion = true,
+			hover = true,
+			format = {
+				enable = true,
+			},
+			schemaStore = {
+				enable = true,
+			},
+			schemas = {
+				kubernetes = {
+					"*.k8s.yaml",
+					"*.k8s.yml",
+					"k8s/**/*.yaml",
+					"k8s/**/*.yml",
+					"gitops/**/*.yaml",
+				},
+				["https://json.schemastore.org/github-workflow.json"] = {
+					".github/workflows/*.yml",
+					".github/workflows/*.yaml",
+				},
+			},
+		},
+	},
+})
+vim.lsp.enable("yamlls")
+
 -- mips-language-server
 local config = {
 	cmd = { "/Users/zhangyizhong/Coding/rust/mips-language-server/target/release/mips-language-server" },
