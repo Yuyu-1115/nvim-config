@@ -11,41 +11,41 @@ local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 
 return {
+	s({ trig = "endl", dscr = "std::endl" }, {
+		t("std::endl"),
+	}),
 	s(
-		{ trig = "endl", dscr = "std::endl"},
-		{
-			t("std::endl")
-		}
-	),
-	s(
-		{ trig = "main", dscr = "int main()"},
+		{ trig = "main", dscr = "int main()" },
 		fmta(
-[[int main(){
+			[[int main(){
 	<>
 	return 0;
 }]],
-		{
-			i(0)
-		}
+			{
+				i(0),
+			}
 		)
 	),
 	s(
-		{ trig = "split", dscr = "split string with delimiter"},
+		{ trig = "split", dscr = "split string with delimiter" },
 		fmta(
-[[std::vector<<std::string>> <>;
-std::getline(std::cin, dummy);
-std::istringstream sin;
-sin.str(dummy);
-while (std::getline(sin, dummy, '<>')){
-	<>.push_back(dummy);
+			[[auto split(std::string_view str, std::string_view delim) {
+    std::vector<<std::string_view>> result;
+    size_t start = 0;
+    size_t end = str.find(delim);
+
+    while (end != std::string_view::npos) {
+        result.push_back(str.substr(start, end - start));
+        start = end + delim.size();
+        end = str.find(delim, start);
+    }
+    result.push_back(str.substr(start));
+    return result;
 }
 <>]],
-		{
-			i(0, "vec"),
-			i(1, "delimiter"),
-			rep(0),
-			i(2)
-		}
+			{
+				i(0),
+			}
 		)
 	),
 }
