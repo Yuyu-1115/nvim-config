@@ -9,8 +9,7 @@ return {
 					win = {
 						input = {
 							keys = {
-								["<a-s>"] = { "flash", mode = { "n", "i" } },
-								["s"] = { "flash" },
+								["<Leader>sf"] = { "flash" },
 							},
 						},
 					},
